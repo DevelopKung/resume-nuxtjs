@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  resume-app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    restart: always
+    environment:
+      NODE_ENV: production
+      GITPAGES_NAME: /resume-nuxtjs/
+      PORT: 3010
+      HOST: 0.0.0.0
+    ports:
+      - 3010:3010
+    command: ["npm", "run", "start"]
+    
