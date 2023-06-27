@@ -7,7 +7,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "deploy": "git add . && git commit -m 'update resume' && git push origin -f master && npm run web",
+    "deploy": "git add . && git commit -m 'update resume' && git push -f origin master && npm run web",
     "web": "npm run build && push-dir --dir=dist --branch=for-web --cleanup && rm -r dist"
   },
   "dependencies": {

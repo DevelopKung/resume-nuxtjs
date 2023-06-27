@@ -11,13 +11,13 @@
       <div v-html="user.header.description"></div>
     </div>
 
-    <div  class="my-4">
+    <div class="my-4">
       <h2>{{ user.educational.title }}</h2>
       <div class="mt-2" v-for="(row, index) in user.educational.details" :key="index">
         <div>
           <h3>{{ row.school }}</h3>
         </div>
-        <small><b>{{ row.date }}</b></small>
+        <small v-if="row.date"><b>{{ row.date }}</b></small>
         <div>
           <small>{{ row.faculty }} - {{ row.level }}</small>
         </div>
